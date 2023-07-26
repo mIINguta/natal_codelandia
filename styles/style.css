@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  background-color: #F7C7B9;
+  height: 15vh;
+}
+header a {
+  color: #000;
+}
+
+nav > ul {
+  width: 30vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.home, .happy {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+
+.div-text > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.home {
+  background-color: #F7C7B9;
+  height: 100vh;
+}
+
+.div-text {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 35vw;
+  gap: 13px;
+}
+.div-text a {
+  color: #FFFFFF;
+  background-color: #DA2535;
+  border-radius: 10px;
+  width: 16vw;
+  height: 8vh;
+}
+.div-text h1 {
+  font-size: 3em;
+}
+
+.acessories {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  gap: 30px;
+  text-align: center;
+}
+.acessories p, .acessories h2 {
+  width: 40vw;
+  text-align: center;
+}
+
+.cont-acessories {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  gap: 50px;
+}
+.cont-acessories figure, .cont-acessories figcaption p {
+  width: 15vw;
+}
+.cont-acessories p {
+  padding-top: 15px;
+}
+
+.happy {
+  background-color: #F7C7B9;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  height: 20vh;
+}
+
+.hamburg {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  header nav, .home figure, .happy figure {
+    display: none;
+  }
+  .hamburg, .ativo {
+    display: block;
+  }
+  header {
+    flex-wrap: wrap;
+  }
+  .ativo ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 100vw;
+  }
+  .home, .acessories, .happy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .home div, .acessories div, .happy div {
+    width: 90vw;
+    gap: 30px;
+  }
+  .home a, .acessories a, .happy a {
+    width: 90vw;
+  }
+  .acessories p, .acessories h2 {
+    width: 100%;
+    padding: 0%;
+  }
+  .acessories .cont-acessories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .acessories .cont-acessories figure, .acessories .cont-acessories figcaption p {
+    width: 65vw;
+  }
+  .happy {
+    padding: 30px;
+  }
+  footer .logo {
+    display: none;
+  }
+  footer nav ul {
+    width: 80vw;
+    justify-content: space-between;
+  }
+}/*# sourceMappingURL=style.css.map */

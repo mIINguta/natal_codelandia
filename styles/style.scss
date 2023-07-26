@@ -1,0 +1,146 @@
+$brand-color: #F7C7B9;
+$button-color: #DA2535;
+$mobile: 600px;
+
+@mixin reset(){
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+        text-decoration: none;
+}
+@mixin position($justify-content, $flex-direction, $align-items){
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-direction: $flex-direction;
+}
+*{
+    @include reset;
+}
+header{
+    @include position(space-around, row,center);
+    background-color: $brand-color;
+    height: 15vh;
+    a {
+        color:#000;
+    }
+}
+nav > ul{
+    width: 30vw;
+    @include position(space-around, row,center)
+}
+.logo{
+    @include position(space-around, row, center);
+    gap: 10px;
+}
+.home,.happy{
+    @include position(space-around, row, center);
+}
+.div-text > a{
+    @include position(center, row, center);
+    gap: 10px;
+}
+.home{
+    background-color: $brand-color;
+    height: 100vh;
+}
+.div-text{
+    @include position(space-around, column, flex-start);
+    width: 35vw;
+    gap: 13px;
+    a{
+        color: #FFFFFF;
+        background-color: $button-color;
+        border-radius: 10px;
+        width: 16vw;
+        height: 8vh;
+    }
+    h1{
+        font-size: 3em;
+    }
+}
+.acessories{
+    @include position(space-around, column, center);
+    padding: 20px;
+    gap: 30px;
+    text-align: center;
+    p, h2{
+        width: 40vw;
+        text-align: center;
+    }
+}
+.cont-acessories{
+    @include position(space-around, row, center);
+    gap: 50px;
+    figure, figcaption p{
+        width: 15vw;
+    }
+    p{
+        padding-top: 15px;
+    }
+}
+.happy{
+    background-color: $brand-color;
+}
+footer{
+    @include position(space-around, row, center);
+    height: 20vh;
+}
+.hamburg{
+    display: none;
+  }
+@media (max-width: $mobile) {
+    header nav , .home figure, .happy figure {
+            display: none;
+    }
+   .hamburg, .ativo{
+    display: block;
+   }
+   header{
+    flex-wrap: wrap;
+    }
+   .ativo{
+    ul{
+        @include position(space-around, row, center);
+        width: 100vw;
+    }
+   }
+    .home, .acessories, .happy{
+        @include position(center, column, center);
+        text-align: center;
+        div{
+            width: 90vw;
+            gap: 30px;
+        }
+        a{
+            width: 90vw;
+        }
+}
+    .acessories{
+        p, h2{
+            width: 100%;
+            padding: 0%;
+        }
+        .cont-acessories{
+            @include position(center, column, center);
+            
+            figure, figcaption p{
+                width: 65vw;
+            }
+        }
+    }
+    .happy{
+        padding: 30px;;
+    }
+    footer {
+        .logo{
+            display: none;
+        }
+        nav ul{
+            width: 80vw;
+            justify-content: space-between;
+        }
+    }
+}
+
