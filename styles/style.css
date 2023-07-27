@@ -19,11 +19,12 @@ header a {
 }
 
 nav > ul {
-  width: 30vw;
+  width: 40vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -115,6 +116,14 @@ footer {
 
 .hamburg {
   display: none;
+}
+
+.figure-home, .figure-happy {
+  width: 45vw;
+}
+
+figure img {
+  width: 100%;
 }
 
 @media (max-width: 600px) {

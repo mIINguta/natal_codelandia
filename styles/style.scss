@@ -27,8 +27,9 @@ header{
     }
 }
 nav > ul{
-    width: 30vw;
-    @include position(space-around, row,center)
+    width: 40vw;
+    @include position(space-around, row,center);
+    flex-wrap:wrap;
 }
 .logo{
     @include position(space-around, row, center);
@@ -90,6 +91,13 @@ footer{
 .hamburg{
     display: none;
   }
+
+.figure-home, .figure-happy{
+    width: 45vw;
+}
+figure img{
+    width: 100%;
+}
 @media (max-width: $mobile) {
     header nav , .home figure, .happy figure {
             display: none;
